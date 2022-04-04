@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation du back Groupomania</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        h1,
+        h2 {
+            font-family: 'Merienda One', sans-serif;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none
+        }
+
+        .modal-content {
+            width: 166%;
+            text-align: center;
+        }
+
+        /* .shadow-lg:hover {
+            transform: translateY(-10px);
+            border: 1px solid green !important;
+        } */
+
+        .shadow-lg {
+            border: 1px solid #333 !important;
+        }
+
+        .tdPhoto{
+            position: relative;
+        }
+        .tdPhotoItem {
+            position: absolute;
+            width: 43.7% !important;
+            margin-left: 35px ​!important;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 px-1">
+                <h1 class="text-center p-4">Cours TRA/2022</h1>
+
+                <div class="container row d-flex justify-content-center">
+                    <div class="col-6 p-5">
+                        <div class="list-group">
+                            <a href="#user1" class="list-group-item list-group-item-action text-center">
+                                <div class="text-center">
+                                    <h5 class="mb-1">Introduction</h5>
+                                </div>
+                                <p class="mb-1">Gestion de l'incription et connection.</p>
+                            </a>
+                            <a href="#hydrauliques" class="list-group-item list-group-item-action text-center">
+                                <div class="text-center">
+                                    <h5 class="mb-1">Ascenseurs Hydrauliques</h5>
+                                </div>
+                                <p class="mb-1">Gestion de l'incription et connection.</p>
+                            </a>
+
+                            <a href="#traction" class="list-group-item list-group-item-action text-center">
+                                <div class="text-center">
+                                    <h5 class="mb-1">Ascenseurs traction à câble</h5>
+                                </div>
+                                <p class="mb-1">Gestion de l'incription et connection.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="h1 text-center mt-5" id="analyse"><ins>Rapport</ins></h2>
+
+                
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ( Ascenseurs General ) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <div class="col border border-2 border-black shadow-lg my-5 rounded">
+                    <h2 class="h1 text-center mt-5" id="user1"><ins>user.js</ins></h2>
+
+                    <ul class="nav nav-pills mb-3 d-flex justify-content-center my-5" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-dependenceUser-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-dependenceUser" type="button" role="tab"
+                                aria-controls="pills-dependenceUser" aria-selected="true">Introduction</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-shemaUser-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-shemaUser" type="button" role="tab"
+                                aria-controls="pills-shemaUser" aria-selected="false">Shéma</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content mb-5" id="pills-tabContent">
+                        
+                       <!-------------------------------------------- -------------------------------------------->
+                        <div class="tab-pane fade show active px-3" id="pills-dependenceUser" role="tabpanel" aria-labelledby="pills-dependenceUser-tab">
+
+                            <h1>Composant générale de l’ascenseur</h1>
+
+                            <table class="table table-hover table-striped table-bordered border-success fs-5 mt-5">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th colspan="2" class="fs-5"><h3>Deux grandes familles d’ascenseur</h3></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!------------- () ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/moteur.png" class="img-responsive w-50 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color: green;" class="text-center mb-3" href="#hydrauliques">Les ascenseurs hydrauliques</a>
+                                                <li>
+                                                    <p>Machine hydraulique qui met la pompe du reservoir d'huile sous pression qui pousse le piston hors du cylindre vers le haut. Lorsque la commande de descente est programmée, le by-pass (vanne) de la pompe permet de laisser sortie l'huile du cylindre vers le réservoir.</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- () ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <!-- <img src="./img" class="img-responsive w-50 me-5" alt="">
+                                                <img src="./img" style="height: 298px;" class="img-responsive w-50 tdPhotoItem" alt=""> -->
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color:green;" class="text-center mb-3" href="#traction">Les ascenseurs à traction à câble</a>
+
+                                                <li>
+                                                    <p><code>Les moteurs-treuils à vis sans fin à une ou deux vitesses</code></p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Les moteurs-treuils planétaires</code> </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Les moteurs à attaque directe « gearless» ou « sans treuil»</code> </p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- (Moteur) ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/moteur.png" class="img-responsive w-50 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color: green;" class="text-center mb-3" href="#">Les moteurs électriques</a>
+                                                <p><code>Le moteur asynchrone</code></p>
+                                                
+                                                <li>
+                                                    <p>Le moteur asynchrone est une machine transformant l'énergie électrique apportée par le courant alternatif monophasé ou triphasé, en énergie mécanique.</p>
+                                                    <p>Il est caractérisé par des grandeurs d'entrée qui son électriques (U, I, cosφ) le nombre de phases et des grandeurs de sortie mécaniques (P, n, T).</p>
+                                                    <p>
+                                                        Un moteur triphasé est constitué du :
+                                                        <ul>
+                                                            <li><code>Stator (partie fixe) :</code> 3 enroulements (1 par phase) alimentés par des tensions triphasées produisant ainsi un champ magnétique tournant à la fréquence n. Les enroulements du stator sont couplés soit en étoile soit en triangle. Sur certains moteurs les deux couplages sont réalisables et offrent la possibilité au moteur de fonctionner avec 2 systèmes différents de tensions triphasées.</li>
+                                                            <li><code>Rotor (partie tournante) :</code> Il est placé dans le champ tournant du stator. L'enroulement rotorique n'est relié à aucune source extérieure, il est fermé sur lui même, donc en court circuit. Les seuls courants le traversant sont les courants de FOUCAULT induits par la rotation du champ statorique.</li>
+                                                            <li><code></code></li>
+                                                        </ul>
+                                                    </p>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p><code></code></p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p class="d-flex">
+                                <a href="#user1" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- fin User -->
+
+
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ( Ascenseurs hydrauliques ) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <div class="col border border-2 border-black shadow-lg my-5 rounded">
+                    <h2 class="h1 text-center mt-5" id="hydrauliques"><ins>Ascenseurs hydrauliques</ins></h2>
+
+                    <ul class="nav nav-pills mb-3 d-flex justify-content-center my-5" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-dependenceUser-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-dependenceUser" type="button" role="tab"
+                                aria-controls="pills-dependenceUser" aria-selected="true">Introduction</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-shemaUser-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-shemaUser" type="button" role="tab"
+                                aria-controls="pills-shemaUser" aria-selected="false">Shéma</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content mb-5" id="pills-tabContent">
+                        
+                       <!-------------------------------------------- -------------------------------------------->
+                        <div class="tab-pane fade show active px-3" id="pills-dependenceUser" role="tabpanel" aria-labelledby="pills-dependenceUser-tab">
+
+                            <h1>Les ascenseurs hydrauliques</h1>
+
+                            <table class="table table-hover table-striped table-bordered border-success fs-5 mt-5">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th colspan="2" class="fs-5"><h3>Les catégories d’ascenseurs</h3></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!------------- () ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/moteur.png" class="img-responsive w-50 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4">
+                                                <p>Deux grandes familles d’ascenseur</p>
+                                                <li>
+                                                    <p><code>Les ascenseurs traction à câble</code> </p>
+                                                </li>
+                                                
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- () ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <!-- <img src="./img" class="img-responsive w-50 me-5" alt="">
+                                                <img src="./img" style="height: 298px;" class="img-responsive w-50 tdPhotoItem" alt=""> -->
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4">
+                                                <p>Le rendu des éléments avec <code>render</code> </p>
+                                                <li>
+                                                    <p><code></code> </p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p class="d-flex">
+                                <a href="#hydrauliques" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                            </p>
+                        </div>
+
+
+                        <!--################################################### () ###################################################-->
+                        <div class="tab-pane fade" id="pills-shemaUser" role="tabpanel" aria-labelledby="pills-shemaUser-tab">
+                            <nav>
+                                <div class="nav nav-tabs m-3 d-flex justify-content-center" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-createShemaUser-tab" data-bs-toggle="tab" data-bs-target="#nav-createShemaUser" type="button" role="tab" aria-controls="nav-createShemaUser" aria-selected="true">sequelize CLI</button>
+                                    <button class="nav-link" id="nav-userModels-tab" data-bs-toggle="tab" data-bs-target="#nav-userModels" type="button" role="tab" aria-controls="nav-userModels" aria-selected="false">models</button>
+                                    <button class="nav-link" id="nav-userMigration-tab" data-bs-toggle="tab" data-bs-target="#nav-userMigration" type="button" role="tab" aria-controls="nav-userMigration" aria-selected="false">migration</button>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                            
+                                <!-------------------------------------------- -------------------------------------------->
+                                <div class="tab-pane fade" id="nav-userModels" role="tabpanel" aria-labelledby="nav-userModels-tab">
+                                    <h1>Moteur</h1>
+
+
+
+                                    <p class="d-flex">
+                                        <a href="#hydrauliques" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                                    </p>
+                                </div><!-- fin models -->
+                                
+                                <!-------------------------------------------- -------------------------------------------->
+
+                                <div class="tab-pane fade" id="nav-userMigration" role="tabpanel" aria-labelledby="nav-userMigration-tab">
+                                    <h1>Moteur</h1>
+
+
+
+                                    <p class="d-flex">
+                                        <a href="#hydrauliques" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                                    </p>
+                                </div><!-- fin migration -->
+    
+                            </div>
+                        </div><!-- fin  -->
+                    </div>
+                </div> <!-- fin  -->
+
+
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ( Ascenseurs traction à câble ) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <div class="col border border-2 border-black shadow-lg my-5 rounded">
+                    <h2 class="h1 text-center mt-5" id="traction"><ins>Ascenseurs traction à câble</ins></h2>
+
+                    <ul class="nav nav-pills mb-3 d-flex justify-content-center my-5" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-dependenceUser-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-dependenceUser" type="button" role="tab"
+                                aria-controls="pills-dependenceUser" aria-selected="true">Introduction</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-shemaUser-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-shemaUser" type="button" role="tab"
+                                aria-controls="pills-shemaUser" aria-selected="false">Shéma</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content mb-5" id="pills-tabContent">
+                        
+                       <!-------------------------------------------- -------------------------------------------->
+                        <div class="tab-pane fade show active px-3" id="pills-dependenceUser" role="tabpanel" aria-labelledby="pills-dependenceUser-tab">
+
+                            <h1>Les ascenseurs traction à câble</h1>
+
+                            <table class="table table-hover table-striped table-bordered border-success fs-5 mt-5">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th colspan="2" class="fs-5"><h3>Différentes parties d’un ascenseur à traction</h3></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!------------- () ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/moteur.png" class="img-responsive w-50 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4">
+                                                
+                                                <li>
+                                                    <p><code>Cabine d'ascenseur :</code> Elément composé d'un plancher, de parois et d'un toit destiné à accueillir les personnes et les marchandises (La partie visible de l'ascenseur) Cet élément est inséré et fixé dans un cadre appelé suspension cabine.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Porte de cabine :</code> Porte à fermeture généralement automatique destinée à confiner l'utilisateur dans la cabine pendant le déplacement de celle-ci, lui interdisant tous contact avec les parties extérieures à la cabine. </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Porte palières :</code> C’est la porte externe de l’ascenseur. Chaque ascenseur est équipé d’autant de porte palière que de nombre d’étage. Elles peuvent être battantes et commandées manuellement ou automatiques et coulissantes (à ouverture centrale ou latérale). Elles doivent être équipés d’un dispositif empêchant leurs ouvertures si la cabine n’est pas sur le niveau et bloquant le départ pendant leur ouverture </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Boutons d'appels :</code> On nomme boutons d'appels les boutons installés aux paliers</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Boutons d'envois :</code> Les boutons d'envois sont installés dans la cabine</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Charge utile :</code> Capacité maximum en Kg qu'une cabine d'ascenseur peut contenir. Au-delà de cette capacité, le système de traction n'est plus en mesure de contrôler le déplacement et l'arrêt correct de la cabine. Dans certains cas de surcharge exagérée, des blocages intempestifs peuvent se produire. La charge utile est une indication qui doit obligatoirement figurer dans la cabine.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Contrepoids : </code> Elément destiné à contre balancer le poids de la suspension cabine augmenté de la moitié de la charge utile. Celui-ci est constitué d'une suspension métallique contenant des gueuzes en fonte destinées à l'alourdir. Lorsque la cabine d'ascenseur monte, le contrepoids descend.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Suspension cabine :</code> Cadre rigide composé de poutrelles en acier et destiné à accueillir la cabine. Ce cadre est suspendu dans la gaine par les câbles de traction. Des coulisseaux épousant la forme des guides de cabine et fixés à la suspension assurent le déplacement parfait de la cabine. (est aussi appelé étrier)</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Gaine d'ascenseur :</code> Gaine verticale dans laquelle se déplace l'ascenseur et son contrepoids. Celle-ci est équipée de guides en acier destinés à guider la suspension de cabine et le contrepoids</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Guides :</code> Profilés en acier, généralement en forme de T, destinés à guider la cabine et le contrepoids dans la gaine</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Ancrage de guide :</code> Pièce métallique servant à fixer les guides aux murs de la gaine.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Coulisseaux :</code> Eléments fixés à la suspension, garnis d'une fourrure épousant la forme des guides et destinés à guider celle-ci dans la gaine</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Cuvette:</code> Partie la plus basse de la gaine de l'ascenseur contenant les poulies de renvoi et les amortisseurs</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Amortisseurs:</code> Ressorts puissants placés en cuvette et destinés a ralentir la suspension cabine ou le contrepoids en cas de dépassement des "fin de course" de sécurité. Dans le cas d'un ascenseur à grande vitesse, on utilise des amortisseurs à huile </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Fin de course : </code>Contact de sécurité placé généralement en gaine et destiné a stopper l'ascenseur en cas de dépassement de sa course normale. La fin de course peut aussi se trouver en machinerie. Dans ce cas, il est actionné soit par le tambour de traction soit par le câble du limiteur </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Câble de sélecteur d'étage :</code> Généralement, les sélecteurs d'étage mécaniques sont entraînés par le treuil ou le limiteur de vitesse. Cependant, certains sélecteurs d'étage ont leur propre câble d'entraînement. Celui-ci, relié entre la cabine d'ascenseur et le contrepoids entraîne un petit tambour qui actionne le sélecteur d'étage. </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Machinerie :</code> Local généralement placé au-dessus de la gaine et destiné à contenir l'appareillage et le système de traction. Aussi appelé "salle des machines "</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Appareillage :</code> Armoire placée en machinerie et contenant les relais, et autres équipements destinés à commander l'ascenseur.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Treuil :</code> Machine composée d'un dispositif de freinage et d'un moteur et destinée à actionner les câbles de traction de l'ascenseur. On distingue trois types de treuil : Les anciennes machines à tambour de traction. Les machines, équipées d'un réducteur, appelées Geared (avec boîte de vitesse). Les machines à traction directe (sans boîte de vitesse) sont appelées Gearless. Ce sont les plus modernes et les plus performantes.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Machine geared :</code> Treuil d'ascenseur équipé d'un réducteur. Machine actuellement la plus répandue. Cependant, de nouveaux concepts de réduction de l'espace occupé par les salles de machines, voire la suppression totale de celle-ci, tendent à revaloriser l'utilisation de machine de type gearless, car à puissance égale, ces nouvelles machines à moteur axial prennent nettement moins de place et peuvent même être montées dans les gaines.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Moteur de traction :</code> Moteur équipant le treuil de l’ascenseur et placé dans la machinerie</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Réducteur :</code> Le réducteur du treuil est une boîte de vitesse composée soit d'une vis et d'une couronne soit d’un réducteur planétaire contenus dans un carter rempli d'huile. Son rôle consiste à démultiplier la vitesse du moteur électrique pour la rendre compatible avec les conditions d’utilisation de l’ascenseur. Pour assurer la lubrification de l'ensemble, la couronne baigne généralement dans l'huile du carter et par sa rotation ramène de l'huile vers les autres organes.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Tambour de traction :</code> Le tambour de traction est une pièce cylindrique creuse équipée de 2 gorges en forme de pas de vis. 2 câbles de traction sont fixés au tambour et à la suspension cabine, 2 autres au tambour et au contrepoids. Lorsque le tambour, commandé par le treuil tourne, les câbles, du côté de la cabine, s'enroulent et font monter celle-ci pendant que les câbles, du côté du contrepoids, se déroulent et le font descendre. Le tambour a été remplacé depuis par une poulie de traction</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Poulie de traction :</code> Poulie équipée généralement de gorges taillées en forme de V de manière à agripper les câbles de traction. Cette poulie, solidaire du treuil, fait lors de sa rotation se déplacer l'ensemble cabine et contrepoids.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Volant de dépannage :</code> Dans le but d'assurer le déplacement manuel de l'ascenseur, un volant de dépannage est généralement fixé soit sur l'arbre du moteur de traction soit sur l'axe du treuil. Certaines anciennes installations sont encore équipée d'un volant amovible. Celui-ci doit impérativement être replacé sur son support (s'il existe) qui est en principe équipé d'un contact de sécurité empêchant la remise en service intempestive de l'ascenseur.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Marquage des câbles :</code> Tous les ascenseurs équipés de treuil devraient être équipés d'un marquage sur les câbles de traction matérialisant la mise à niveau de la cabine. Celui-ci est à niveau lorsque la marque des câbles est en face d'une marque de même couleur peinte sur le châssis du treuil. Certains ascenseurs possèdent quant à eux un voyant installé sur l'appareillage qui lorsqu'il est allumé, informe de la mise à niveau de la cabine.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Câbles de compensation :</code> Dans les immeubles de grande hauteur, le poids des câbles de traction devient trop important par rapport à la charge utile de la cabine d'ascenseur. Il existe donc une forte différence selon que la cabine se trouve en haut ou en bas de la gaine. On résout ce problème par l'adjonction de câbles ou de chaîne de compensation. Ceux-ci, d'un poids identique aux câbles de traction sont pendus entre la cabine et le contrepoids et permettent de maintenir l'ensemble en équilibre quelle que soit la position de la cabine.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Chaîne :</code> Sur quelques ascenseurs spéciaux, certains câbles sont remplacés par des chaînes remplissant les mêmes fonctions. (Câbles de compensation , câble de limiteur , câble de sélecteur d'étage , câbles de traction)</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Machine gearless :</code> Treuil d'ascenseur sans réducteur de vitesse. La poulie de traction est directement montée sur l'axe du moteur de traction. Ce principe permet d'atteindre de très grande vitesse de déplacement (Jusqu'à 12 m/s)</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Servofrein :</code> Mécanisme composé de pignons et d'un secteur de roue dentée. Celui-ci, commandé par un moteur est destiné à actionner le mécanisme de défreinage des mâchoires de frein. Le servofrein a depuis été remplacé par l'électrofrein.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Electrofrein :</code> Electroaimant puissant destiné à assurer le défreinage des mâchoires de frein. Dans le but de permettre un défreinage manuel, l'électrofrein est généralement équipé d'un levier fixé à demeure. Si celui-ci est amovible, il doit être laissé à disposition dans la machinerie</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Tambour de frein :</code> Pièce cylindrique fixée solidement sur l'axe de la vis du treuil. Lors de l'arrêt de l'ascenseur, les mâchoires de frein sont appliquées fermement sur celui-ci pour immobiliser l'ascenseur</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Garnitures de frein :</code> Patins de friction en matière spéciale collés ou rivés sur les mâchoires de frein et destinés à bloquer efficacement le tambour de frein. Autrefois, l'amiante entrait dans la composition de ces garnitures, mais actuellement les nouveaux patins en sont dépourvus</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Mâchoires de frein :</code> Pièces métalliques équipées de garnitures de friction et épousant la forme du tambour de frein. Les mâchoires, destinées à immobiliser l'ascenseur sont appliquées fermement contre le tambour par des ressorts. L'ouverture du frein est assurée par un mécanisme de défreinage. Celui-ci est actionné par un électroaimant puissant qu'on appelle électrofrein</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Drive :</code> Le drive est la partie de l'appareillage qui commande le système de traction de l'ascenseur.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Moto génératrice :</code> Machine destinée à créer une alimentation en courant continu de forte puissance. Cette machine est composée, d'une part, d'un moteur à induction alternatif triphasé et, d'autre part, d'une génératrice à courant continu. Ces deux machines sont solidaires l'une de l'autre et l'ensemble tourne à une vitesse d'environ 1380 tours par minute.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Moteur à courant continu:</code> </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code>Moteur à induction alternatif:</code> </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code></code> </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code></code> </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code></code> </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code></code> </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><code></code> </p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- () ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <!-- <img src="./img" class="img-responsive w-50 me-5" alt="">
+                                                <img src="./img" style="height: 298px;" class="img-responsive w-50 tdPhotoItem" alt=""> -->
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4">
+                                                <p>Le rendu des éléments avec <code>render</code> </p>
+                                                <li>
+                                                    <p><code></code> </p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p class="d-flex">
+                                <a href="#traction" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                            </p>
+                        </div>
+
+
+                        <!--################################################### () ###################################################-->
+                        <div class="tab-pane fade" id="pills-shemaUser" role="tabpanel" aria-labelledby="pills-shemaUser-tab">
+                            <nav>
+                                <div class="nav nav-tabs m-3 d-flex justify-content-center" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-createShemaUser-tab" data-bs-toggle="tab" data-bs-target="#nav-createShemaUser" type="button" role="tab" aria-controls="nav-createShemaUser" aria-selected="true">sequelize CLI</button>
+                                    <button class="nav-link" id="nav-userModels-tab" data-bs-toggle="tab" data-bs-target="#nav-userModels" type="button" role="tab" aria-controls="nav-userModels" aria-selected="false">models</button>
+                                    <button class="nav-link" id="nav-userMigration-tab" data-bs-toggle="tab" data-bs-target="#nav-userMigration" type="button" role="tab" aria-controls="nav-userMigration" aria-selected="false">migration</button>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                            
+                                <!-------------------------------------------- -------------------------------------------->
+                                <div class="tab-pane fade show active" id="nav-createShemaUser" role="tabpanel" aria-labelledby="nav-createShemaUser-tab">
+                                    <h1>Moteur</h1>
+
+                                    <p class="d-flex">
+                                        <a href="#traction" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                                    </p>
+                                </div> <!-- fin CLI -->
+
+                                
+                                <!-------------------------------------------- -------------------------------------------->
+                                <div class="tab-pane fade" id="nav-userModels" role="tabpanel" aria-labelledby="nav-userModels-tab">
+                                    <h1>Moteur</h1>
+
+
+
+                                    <p class="d-flex">
+                                        <a href="#traction" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                                    </p>
+                                </div><!-- fin models -->
+                                
+                                <!-------------------------------------------- -------------------------------------------->
+
+                                <div class="tab-pane fade" id="nav-userMigration" role="tabpanel" aria-labelledby="nav-userMigration-tab">
+                                    <h1>Moteur</h1>
+
+
+
+                                    <p class="d-flex">
+                                        <a href="#traction" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                                    </p>
+                                </div><!-- fin migration -->
+    
+                            </div>
+                        </div><!-- fin Shema -->
+                    </div>
+                </div> <!-- fin  -->
+
+
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ( Ascenseurs traction à câble || hydrauliques ) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <div class="col border border-2 border-black shadow-lg my-5 rounded">
+                    <h2 class="h1 text-center mt-5" id="user1"><ins>user.js</ins></h2>
+
+                    <ul class="nav nav-pills mb-3 d-flex justify-content-center my-5" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-dependenceUser-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-dependenceUser" type="button" role="tab"
+                                aria-controls="pills-dependenceUser" aria-selected="true">Introduction</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-shemaUser-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-shemaUser" type="button" role="tab"
+                                aria-controls="pills-shemaUser" aria-selected="false">Shéma</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content mb-5" id="pills-tabContent">
+                        
+                       <!-------------------------------------------- -------------------------------------------->
+                        <div class="tab-pane fade show active px-3" id="pills-dependenceUser" role="tabpanel" aria-labelledby="pills-dependenceUser-tab">
+
+                            <h1>Les ascenseurs traction à câble || hydrauliques</h1>
+
+                            <table class="table table-hover table-striped table-bordered border-success fs-5 mt-5">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th colspan="2" class="fs-5"><h3>Les catégories d’ascenseurs</h3></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!------------- () ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/moteur.png" class="img-responsive w-50 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4">
+                                                <p>Deux grandes familles d’ascenseur</p>
+                                                <li>
+                                                    <p><code>Les ascenseurs traction à câble</code> </p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- () ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <!-- <img src="./img" class="img-responsive w-50 me-5" alt="">
+                                                <img src="./img" style="height: 298px;" class="img-responsive w-50 tdPhotoItem" alt=""> -->
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4">
+                                                <p>Le rendu des éléments avec <code>render</code> </p>
+                                                <li>
+                                                    <p><code></code> </p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p class="d-flex">
+                                <a href="#user1" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                            </p>
+                        </div>
+
+
+                        <!--################################################### () ###################################################-->
+                        <div class="tab-pane fade" id="pills-shemaUser" role="tabpanel" aria-labelledby="pills-shemaUser-tab">
+                            <nav>
+                                <div class="nav nav-tabs m-3 d-flex justify-content-center" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-createShemaUser-tab" data-bs-toggle="tab" data-bs-target="#nav-createShemaUser" type="button" role="tab" aria-controls="nav-createShemaUser" aria-selected="true">sequelize CLI</button>
+                                    <button class="nav-link" id="nav-userModels-tab" data-bs-toggle="tab" data-bs-target="#nav-userModels" type="button" role="tab" aria-controls="nav-userModels" aria-selected="false">models</button>
+                                    <button class="nav-link" id="nav-userMigration-tab" data-bs-toggle="tab" data-bs-target="#nav-userMigration" type="button" role="tab" aria-controls="nav-userMigration" aria-selected="false">migration</button>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                            
+                                <!-------------------------------------------- -------------------------------------------->
+                                <div class="tab-pane fade" id="nav-userModels" role="tabpanel" aria-labelledby="nav-userModels-tab">
+                                    <h1>Moteur</h1>
+
+
+
+                                    <p class="d-flex">
+                                        <a href="#user1" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                                    </p>
+                                </div><!-- fin models -->
+                                
+                                <!-------------------------------------------- -------------------------------------------->
+
+                                <div class="tab-pane fade" id="nav-userMigration" role="tabpanel" aria-labelledby="nav-userMigration-tab">
+                                    <h1>Moteur</h1>
+
+
+
+                                    <p class="d-flex">
+                                        <a href="#user1" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                                    </p>
+                                </div><!-- fin migration -->
+    
+                            </div>
+                        </div><!-- fin Shema -->
+                    </div>
+                </div> <!-- fin  -->
+
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
