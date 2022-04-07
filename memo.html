@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation du back Groupomania</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        h1,
+        h2 {
+            font-family: 'Merienda One', sans-serif;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none
+        }
+
+        .modal-content {
+            width: 166%;
+            text-align: center;
+        }
+
+        /* .shadow-lg:hover {
+            transform: translateY(-10px);
+            border: 1px solid green !important;
+        } */
+
+        .shadow-lg {
+            border: 1px solid #333 !important;
+        }
+
+        .tdPhoto{
+            position: relative;
+        }
+        .tdPhotoItem {
+            position: absolute;
+            width: 43.7% !important;
+            margin-left: 35px ​!important;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 px-1">
+                <h1 class="text-center p-4">Memo</h1>
+
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ( Ascenseurs General ) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <div class="col border border-2 border-black shadow-lg my-5 rounded">
+                    <div class="tab-content mb-5" id="pills-tabContent">
+                        
+                       <!-------------------------------------------- -------------------------------------------->
+                        <div class="tab-pane fade show active px-3" id="pills-dependenceUser" role="tabpanel" aria-labelledby="pills-dependenceUser-tab">
+
+                            <table class="table table-hover table-striped table-bordered border-success fs-5 mt-5">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th colspan="2" class="fs-5"><h3>Ascenseurs Électrique</h3></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <!------------- (Cabine/Guides) ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/guide.png" class="img-responsive w-50 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color: green;" class="text-center mb-3" href="#hydrauliques">Cabine/Guides</a>
+                                                
+                                                <li>
+                                                    <p class="mb-0"><span style="color:green;">Cabine :</span> Elément composé d'un plancher, de parois et d'un toit destiné à accueillir les personnes et les marchandises (La partie visible de l'ascenseur) Cet élément est inséré et fixé dans un cadre appelé suspension cabine.</p>
+                                                    
+                                                    <ul>
+                                                        <li><code>GS :</code> Contact cabine</li>
+                                                        <li><code>LNS :</code> pèse charge (se déclenche et ne s'arret pas quand la charge utile est à 85%)</li>
+                                                        <li><code>LWO :</code> pèse surcharge (ne décole pas quand le poids est suppérieur ou égales à 110%.)</li>
+                                                        <li><code>ALB :</code> Boutton d'alarme en cabine</li>
+                                                        <li><code>DOB :</code> Boutton ouverture en cabine</li>
+                                                        <li><code>DCB :</code> Boutton fermeture en cabine</li>
+                                                        <li><code>LRCU</code> ou <code>LRD</code> : Céllule de Ré ouverture de porte (detecteur infrarouge autoure des portes)</li>
+                                                        <li><code>SGS :</code> Contact de Ré ouverture de porte (Quand la porte rencontre un obstacle lors de la fermeture, exemple on la bloque.)</li>
+                                                        <li><code>HCI :</code> Indicateur d'étage sur pallier</li>
+                                                        <li><code>CPI :</code> Indicateur d'étage en étage</li>
+                                                        <!-- <li><code> :</code> </li> -->
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <p style="color:green;">Porte cabine:</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p><span style="color:green;">Porte battantes :</span> ouverture manuelle (se fier à l'ouverture de la porte)</p>
+                                                        </li>
+                                                        
+                                                        <li>
+                                                            <p><span style="color:green;">Porte coulissantes automatique :</span> Ouverture latéral ou centrale</p>
+                                                        </li>
+                                                        
+                                                        <li>
+                                                            <p><span style="color:green;">Porte coulissantes articulés :</span> portes "HP" manuelle ou motorisée</p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p><span style="color:green;">Elements Porte</span></p>
+                                                    <li><code>DS :</code> Contact verouillage des portes (auto et manuelle)</li>
+                                                    <li><code>??ADS :</code> Contact des portes fermés (manuelle uniquement)</li>
+                                                    <li><code>??Came mobile : </code></li>
+                                                    <li><code>??Percuteur : </code></li>
+                                                    <li><code>DOL :</code> fin de course ouverture porte</li>
+                                                    <li><code>DCL :</code> fin de course fermeture porte</li>
+                                                    <!-- <li><code></code></li> -->
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- (Toiture cabine) ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/guide2.png" style="height: 527px;" class="img-responsive w-50 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color: green;" class="text-center mb-3" href="#hydrauliques">Toiture cabine</a>
+                                                                                                
+                                                <li>
+                                                    <p><span style="color:green;">Guides :</span> Profilés en acier, généralement en forme de T, destinés à guider la cabine et le contrepoids dans la gaine</p>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p><span style="color:green;">??Arcade :</span> isole la cabine de la gaine (isolation sonor).</p>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p><span style="color:green;">??Tampons :</span> </p>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p><span style="color:green;">Coulisseaux :</span> support qui permet le coulissement de la cabine sur le guide, ils sont fixés à la suspension, garnis d'une fourrure épousant la forme des guides.</p>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p><span style="color:green;">SOS :</span> contact de parachute</p>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p><span style="color:green;">Levier de commande du parachute</span></p>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p><span style="color:green;"></span></p>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p><span style="color:green;"></span></p>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p><span style="color:green;"></span></p>
+                                                </li>
+                                                
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- (Machinerie) ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/machinerie.png" style="height: 527px;" class="img-responsive w-100 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color:green;" class="text-center mb-3" href="#traction">Machinerie</a>
+
+                                                <li>
+                                                    <p><span style="color:green;"></span></p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- (Moteur) ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/TreuilAscenseur.png" style="height: 527px;" class="img-responsive w-75 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color:green;" class="text-center mb-3" href="#traction">Moteur Treuil Ascenseur</a>
+
+                                                <li>
+                                                    <p><span style="color:green;"></span></p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- (Limiteur Vitesse) ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/limiteurVitesse.png" style="height: 527px;" class="img-responsive w-50 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color:green;" class="text-center mb-3" href="#traction">Limiteur De Vitesse</a>
+
+                                                <li>
+                                                    <p><span style="color:green;"></span></p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- (Cuvette) ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/cuvette.png" style="height: 527px;" class="img-responsive w-75 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color:green;" class="text-center mb-3" href="#traction">Cuvette</a>
+
+                                                <li>
+                                                    <p><span style="color:green;">Armortisseur du contre poids</span> </p>
+                                                </li>
+
+                                                <li>
+                                                    <p><span style="color:green;">TES :</span> Boutton arret d'urgence cuvette</p>
+                                                </li>
+
+                                                <li>
+                                                    <p><span style="color:green;">PCS :</span> Boite d'inspection en cuvette (Rare)</p>
+                                                </li>
+
+                                                <h4 style="color:rgb(10, 75, 255);text-decoration:underline" class="text-center mb-2">Accès au fond de cuvette</h4>
+                                                <ol>
+                                                    <li>Informe le client de l'arrêt de l'appareil et une pancarte d'arrêt au niveau principale.</li>
+                                                    <li>S'assurer qu'on ce trouve bien au niveau le plus bas</li>
+                                                    <li>Appel de l'appareil, vérifier l'absence d'usager dans la cabine.</li>
+                                                    <li>S'assurer du controle de l'appareil en testant la <code>porte</code> et le <code>TES</code>(maxi 0,75m de la porte) </li>
+                                                    <li>Si l'appareil est un <code>Gen2</code> consigner le <code>contact BRB2</code>  ou <code>disjoncteur RPS</code></li>
+                                                    <li>Envoyer l'appareil au moin 2 niveau au dessus, dès le départ ouvrir la porte <code>30cm max</code> pour verifier quel ce declenche bien.</li>
+                                                    <li>Refermer attendre qu'il sois entre étage, ré ouvrire </li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ol>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- (Câble Sélecteur) ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <img src="./img/CâbleSélecteur.png" style="height: 527px;" class="img-responsive w-50 d-flex mx-auto my-1" alt="">
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color:green;" class="text-center mb-3" href="#traction">Câble Sélecteur</a>
+
+                                                <li>
+                                                    <p><span style="color:green;"></span></p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <!------------- () ------------->
+                                    <tr>
+                                        <tr>
+                                            <td colspan="2" class="tdPhoto p-1"> 
+                                                <!-- <img src="./img" class="img-responsive w-50 me-5" alt="">
+                                                <img src="./img" style="height: 298px;" class="img-responsive w-50 tdPhotoItem" alt=""> -->
+                                            </td>
+                                        </tr>
+
+                                        <td>
+                                            <ul class="lead fs-4 d-flex flex-column">
+                                                <a style="color:green;" class="text-center mb-3" href="#traction"></a>
+
+                                                <li>
+                                                    <p><span style="color:green;"></span></p>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <p class="d-flex">
+                                <a href="#user1" class="m-auto"><svg id="Capa_1" enable-background="new 0 0 497 497" height="70" viewBox="0 0 497 497" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m131.041 421.577h-.343c-8.254 0-14.946-6.691-14.946-14.946v-33.969c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v33.969c0 8.255-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m209.462 345.842h-.343c-8.254 0-14.946-6.691-14.946-14.946v-14.751c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v14.751c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 497h-.343c-8.254 0-14.946-6.691-14.946-14.946v-87.157c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v87.157c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#fedf30"/><path d="m287.883 483.973h-.343c-8.254 0-14.946-6.691-14.946-14.946v-4.508c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v4.508c-.001 8.255-6.692 14.946-14.946 14.946z" fill="#c8effe"/><path d="m209.462 301.2h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v14.751c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-14.751c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m287.883 449.574h-.343c-2.536 0-4.922.636-7.015 1.751 4.717 2.513 7.931 7.476 7.931 13.194v4.508c0 5.718-3.214 10.681-7.931 13.194 2.092 1.115 4.478 1.751 7.015 1.751h.343c8.254 0 14.946-6.691 14.946-14.946v-4.508c-.001-8.252-6.692-14.944-14.946-14.944z" fill="#99e6fc"/><path d="m366.304 444.574h-.343c-8.254 0-14.946-6.691-14.946-14.946v-54.198c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v54.199c-.001 8.254-6.692 14.945-14.946 14.945z" fill="#fedf30"/><path d="m381.88 328.32-79.05-51.33-30.24-19.63-11.72-7.61c-.26-.17-.52-.34-.77-.5-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25-7.96-10.82-10.32-25.8-2.75-39.87l133.47-248.14c9.74-18.11 27.61-27.12 45.46-27.06 17.73.06 35.44 9.07 45.11 27.06l133.46 248.14c16.2 30.11-13.09 64.41-45.37 53.12z" fill="#0593fc"/><path d="m260.1 249.25c-3.98-2.53-7.58-3.77-11.42-3.68-3.76.08-7.76 1.46-12.56 4.18l-120.99 78.57c-17.2 6.02-33.56-.91-42.63-13.25 5.88.99 12.23.57 18.69-1.69l110.56-71.81c3.43-2.22 4.01-7 1.23-9.98l-6.763-7.236c-.634-.678-.44-1.777.383-2.207 4.094-2.137 7.611-3.226 10.94-3.297 4.08-.1 7.9 1.32 12.19 4.18z" fill="#0182fc"/><g><g><path d="m427.25 275.196-133.465-248.138c-9.67-17.984-27.371-26.996-45.102-27.057-4.909-.017-9.813.678-14.555 2.034 12.501 3.576 23.841 11.899 30.897 25.023l133.465 248.138c11.293 20.986.485 44-18.03 52.205l1.415.919c32.287 11.287 61.579-23.012 45.375-53.124z" fill="#0182fc"/></g></g><path d="m287.883 414.589h-.343c-8.254 0-14.946-6.691-14.946-14.946v-176.291c0-8.254 6.691-14.946 14.946-14.946h.343c8.254 0 14.946 6.691 14.946 14.946v176.291c-.001 8.254-6.692 14.946-14.946 14.946z" fill="#99e6fc"/><path d="m131.041 357.717h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v33.969c0 5.302-2.768 9.947-6.931 12.601 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-33.969c0-8.253-6.692-14.945-14.946-14.945z" fill="#62dbfb"/><path d="m209.462 379.952h-.343c-2.952 0-5.697.868-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.6v87.157c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-87.157c-.001-8.253-6.692-14.944-14.946-14.944z" fill="#fac600"/><path d="m366.303 360.484h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v54.199c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-54.198c0-8.254-6.691-14.946-14.946-14.946z" fill="#fac600"/><path d="m287.883 208.406h-.343c-2.952 0-5.697.867-8.015 2.345 4.162 2.653 6.931 7.299 6.931 12.601v176.291c0 5.302-2.768 9.947-6.931 12.6 2.318 1.478 5.062 2.345 8.015 2.345h.343c8.254 0 14.946-6.691 14.946-14.946v-176.29c-.001-8.255-6.692-14.946-14.946-14.946z" fill="#62dbfb"/></g></svg></a>
+                            </p>
+                        </div>
+                    </div>
+                </div> <!--  -->
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
